@@ -11,7 +11,7 @@ planner onto an autonomous campus shuttle running the Autoware self-driving stac
 ### Crowd-Matching Velocity Planning for Autoware
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/main/docs/media/demo.gif?v=2" width="820" alt="Crowd-matching velocity planning in AWSIM simulation">
+  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/f44e098fa5f0e3e1d97902b53946e18178c68f25/docs/media/demo.gif" width="820" alt="Crowd-matching velocity planning in AWSIM simulation">
 </p>
 
 Stock Autoware places a 5 m stop margin in front of every pedestrian it detects. On a shared campus
