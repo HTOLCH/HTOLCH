@@ -22,9 +22,9 @@ configurable minimum clearance, so matching the crowd never comes at the cost of
 implemented a classical Social Force Model (Helbing & Molnar, 1995) as the baseline to measure it
 against.
 
-Validated with an 8-way comparison of planner and controller configurations in AWSIM, across
-pedestrian densities from 5 to 25. The configuration I settled on removed stop events entirely and
-held mean time-to-collision above 2.3 s. Marked 87.
+Validated in AWSIM across a sweep of pedestrian densities, benchmarked against the baseline and a
+range of planner and controller configurations. The setup I settled on removed stop events entirely
+and held mean time-to-collision above 2.3 s. Marked 87.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="700" alt="Crowd-matching velocity planning in AWSIM simulation">
