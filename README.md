@@ -1,7 +1,7 @@
 ## Harry Tolcher
 
-I build robots and do cool projects in Perth, Western Australia. Most of it starts as a small idea and
-then gets out of hand.
+I build robots and autonomy software in Perth, Western Australia. Most of it starts as a small idea,
+and I tend to keep going until it works.
 
 Mostly C++ and Python. The part I enjoy is where the software meets the hardware: motion planning,
 perception, and working out why the thing that ran perfectly in the sim is now doing something
@@ -19,7 +19,9 @@ busy campus footpath and the shuttle just stands there, forever. So I wrote a
 out how fast the crowd is actually moving, and matches their speed instead of stopping dead.
 
 The tricky part was doing that without ever letting it get too close to anyone. I settled it with an
-8-way comparison of planners and controllers in AWSIM.
+8-way comparison of planners and controllers in AWSIM, across pedestrian densities from 5 to 25. The
+setup I landed on removed the stop events entirely and held mean time-to-collision above 2.3 s. The
+thesis was marked 87.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="700" alt="Crowd-matching velocity planning in AWSIM simulation">
@@ -27,8 +29,8 @@ The tricky part was doing that without ever letting it get too close to anyone. 
 
 **[Code, results and the full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
 
-I also got the full Autoware stack up and running on the actual nUWAy shuttle hardware, which was a
-completely different flavour of pain to the simulation work.
+I also got the full Autoware stack up and running on the nUWAy shuttle's own hardware, integrating it
+from a large and sparsely documented codebase. A very different problem to the simulation work.
 
 ---
 
@@ -60,7 +62,7 @@ The footage lives over at **[youtube.com/@hazfpv771](https://www.youtube.com/@ha
 
 ---
 
-### Stuff I work with
+### What I work with
 
 **Languages** C++, Python
 **Robotics** ROS 2, Autoware, SLAM, motion and velocity planning, state estimation, sensor fusion (Kalman)
@@ -73,5 +75,8 @@ haul-truck retrofit and at GPA Engineering on pipelines. I also tutor Mobile Rob
 Reliability & Safety at UWA.
 
 ---
+
+I finished my Master's in 2026 and am looking for graduate robotics and autonomy roles. Perth based
+and happy to relocate. Always up for talking about any of the above.
 
 Perth, WA &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) &nbsp;·&nbsp; [YouTube](https://www.youtube.com/@hazfpv771) &nbsp;·&nbsp; harrytolcher1@gmail.com
