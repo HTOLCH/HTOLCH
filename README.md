@@ -1,6 +1,6 @@
 ## Harry Tolcher
 
-I build robots and fly drones in Perth, Western Australia. Most of it starts as a small idea and
+I build robots and do cool projects in Perth, Western Australia. Most of it starts as a small idea and
 then gets out of hand.
 
 Mostly C++ and Python. The part I enjoy is where the software meets the hardware: motion planning,
