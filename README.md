@@ -84,7 +84,6 @@ at UWA.
 
 ---
 
-I completed my Master's in 2026 and am looking for graduate robotics and autonomy roles. Perth
-based, and happy to relocate.
+I completed my Master's in 2026 and am looking for graduate robotics and autonomy roles in Perth.
 
 Perth, WA &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) &nbsp;·&nbsp; [YouTube](https://www.youtube.com/@hazfpv771) &nbsp;·&nbsp; harrytolcher1@gmail.com
