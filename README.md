@@ -33,7 +33,7 @@ completely different flavour of pain to the simulation work.
 
 ---
 
-<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
+<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
 
 **Autonomous navigation and SLAM, sim to real**
 
@@ -48,7 +48,7 @@ Watching it drive itself around outside never got old.
 
 ---
 
-<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
+<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
 
 **FPV drones**
 
