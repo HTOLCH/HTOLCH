@@ -47,15 +47,15 @@ Two other parts of the same project:
 To be precise about scope: the planner was validated in simulation. The stack deployment was on the
 vehicle.
 
-<img align="right" width="230" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud.png" alt="Lidar pointcloud map of the UWA campus, top down, coloured by height">
-
 **The map it localises against**
 
 The prior lidar map of the UWA campus: 1.25 million points over roughly 840 m by 560 m, coloured by
 height. Buildings, footpaths and tree canopies all fall out of it. A lanelet2 vector map sits on top
 of this for the drivable paths and lane geometry.
 
-<br clear="all">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud_perspective.png" width="560" alt="Lidar pointcloud map of the UWA campus, perspective view, coloured by height">
+</p>
 
 ---
 
