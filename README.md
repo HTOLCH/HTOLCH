@@ -40,6 +40,16 @@ Two other parts of the same project:
 To be precise about scope: the planner was validated in simulation. The stack deployment was on the
 vehicle.
 
+**The map it localises against**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/51d4abf89e29fb7b4fd6adfc9c72dac9c8760f74/media/campus_pointcloud.png" width="820" alt="Lidar pointcloud map of the UWA campus, coloured by height">
+</p>
+
+The prior map of the UWA campus the shuttle localises into: 1.25 million points over roughly 840 m by
+560 m, coloured by height here. Buildings, footpaths and tree canopies all fall out of it. A lanelet2
+vector map sits on top for the drivable paths and lane geometry.
+
 ---
 
 <img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
