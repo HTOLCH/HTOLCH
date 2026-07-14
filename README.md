@@ -1,49 +1,58 @@
 ## Harry Tolcher
 
-I build robots and autonomy software in Perth, Western Australia. Most of it starts as a small idea,
-and I tend to keep going until it works.
+Robotics and autonomy software engineer in Perth, Western Australia. C++ and Python, mostly on
+ROS 2. I work on the part of the stack where planning and perception have to survive contact with
+real hardware.
 
-Mostly C++ and Python. The part I enjoy is where the software meets the hardware: motion planning,
-perception, and working out why the thing that ran perfectly in the sim is now doing something
-unexpected on the robot. Master of Professional Engineering (Mechanical) at UWA.
+Master of Professional Engineering (Mechanical), UWA.
 
 ---
 
-### Things I've built
+### Crowd-matching velocity planning for Autoware
 
-**Crowd-matching velocity planning for Autoware** *(Master's thesis)*
+*Master's thesis.* **[Code, results and full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
 
-Out of the box, Autoware slams on the brakes 5 m in front of every pedestrian it sees. Put that on a
-busy campus footpath and the shuttle just stands there, forever. So I wrote a
-`behavior_velocity_planner` plugin that spots the pedestrians walking the same way as the bus, works
-out how fast the crowd is actually moving, and matches their speed instead of stopping dead.
+Stock Autoware places a 5 m stop margin in front of every pedestrian it detects. On a shared campus
+footpath the shuttle stops continuously and never completes a route.
 
-The tricky part was doing that without ever letting it get too close to anyone. I settled it with an
-8-way comparison of planners and controllers in AWSIM, across pedestrian densities from 5 to 25. The
-setup I landed on removed the stop events entirely and held mean time-to-collision above 2.3 s. The
-thesis was marked 87.
+I wrote a `behavior_velocity_planner` plugin that identifies co-flow pedestrians, the ones moving in
+the same direction as the vehicle, estimates the mean speed of the crowd, and smoothly converges the
+shuttle onto it. Proximity-based velocity attenuation runs underneath, targeting zero speed at a
+configurable minimum clearance, so matching the crowd never comes at the cost of clearance. I
+implemented a classical Social Force Model (Helbing & Molnar, 1995) as the baseline to measure it
+against.
+
+Validated with an 8-way comparison of planner and controller configurations in AWSIM, across
+pedestrian densities from 5 to 25. The configuration I settled on removed stop events entirely and
+held mean time-to-collision above 2.3 s. Marked 87.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="700" alt="Crowd-matching velocity planning in AWSIM simulation">
 </p>
 
-**[Code, results and the full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
+Two other parts of the same project:
 
-I also got the full Autoware stack up and running on the nUWAy shuttle's own hardware, integrating it
-from a large and sparsely documented codebase. A very different problem to the simulation work.
+- A custom lidar perception engine that detects and tracks pedestrians around the vehicle in real
+  time, GPU-accelerated with hand-written CUDA kernels to keep pace with the sensor rate.
+- Bringing the full Autoware stack up on the nUWAy shuttle's own hardware, integrated from a large
+  and sparsely documented codebase, with a safety fallback layer behind it.
+
+To be precise about scope: the planner was validated in simulation. The stack deployment was on the
+vehicle.
 
 ---
 
 <img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
 
-**Autonomous navigation and SLAM, sim to real**
+### Autonomous navigation and SLAM, simulation through to hardware
 
-GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, plus 3D SLAM. I built
-it in Gazebo first, then let it loose on this thing outdoors, which is where you find out which bits
-you got wrong. I also trained a few PyTorch models along the way: object detectors to find letters
-around the course, and a vision-based driving policy that took camera images straight to steering.
+GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, alongside 3D SLAM.
+Developed in Gazebo, then deployed and validated on a Pioneer robot outdoors, which is where the
+assumptions that only hold in simulation tend to surface.
 
-Watching it drive itself around outside never got old.
+The perception side ran on PyTorch: object detectors to locate targets around the course, where I
+chose YOLO over a custom model for inference speed, and a vision-based driving policy mapping camera
+images directly to steering.
 
 <br clear="all">
 
@@ -51,32 +60,31 @@ Watching it drive itself around outside never got old.
 
 <img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
 
-**FPV drones**
+### FPV drones
 
-I build and fly custom FPV quads. This one is a 5 inch Armattan build, and it has taken a fair
-beating.
+I design, build, repair and fly custom FPV quadcopters. The one pictured is a 5 inch Armattan build.
 
-The footage lives over at **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**.
+Flight footage: **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**
 
 <br clear="all">
 
 ---
 
-### What I work with
+### Technical
 
 **Languages** C++, Python
-**Robotics** ROS 2, Autoware, SLAM, motion and velocity planning, state estimation, sensor fusion (Kalman)
-**Perception** Lidar tracking, object detection, CUDA, PyTorch, OpenCV, YOLO
+**Robotics** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman), coordinate transforms
+**Perception** Lidar tracking and object detection, CUDA, PyTorch, OpenCV, YOLO
 **Simulation** AWSIM / Unity, Gazebo, sim-to-real testing
 **Tooling** Linux, Git, Docker
 
-Before the robotics I did engineering internships in mining and energy, at First Mode on a hydrogen
-haul-truck retrofit and at GPA Engineering on pipelines. I also tutor Mobile Robots and Risk,
-Reliability & Safety at UWA.
+Previously: engineering internships in mining and energy, at First Mode on a hydrogen haul-truck
+retrofit and at GPA Engineering on pipelines. I tutor Mobile Robots, and Risk, Reliability & Safety,
+at UWA.
 
 ---
 
-I finished my Master's in 2026 and am looking for graduate robotics and autonomy roles. Perth based
-and happy to relocate. Always up for talking about any of the above.
+I completed my Master's in 2026 and am looking for graduate robotics and autonomy roles. Perth
+based, and happy to relocate.
 
 Perth, WA &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) &nbsp;·&nbsp; [YouTube](https://www.youtube.com/@hazfpv771) &nbsp;·&nbsp; harrytolcher1@gmail.com
