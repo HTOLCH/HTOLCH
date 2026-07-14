@@ -1,12 +1,11 @@
 ## Harry Tolcher
 
-Robotics software engineer in Perth, Western Australia. I like building cool systems and getting
-stuck into tough problems, mostly in C++ and Python.
+I build robots and fly drones in Perth, Western Australia. Most of it starts as a small idea and
+then gets out of hand.
 
-Most of what I enjoy sits where the software meets the hardware: motion planning, perception, and
-working out why the thing that ran perfectly in the sim is now doing something unexpected on the
-robot. Master of Professional Engineering (Mechanical) at UWA, and a fair few personal projects that
-got out of hand.
+Mostly C++ and Python. The part I enjoy is where the software meets the hardware: motion planning,
+perception, and working out why the thing that ran perfectly in the sim is now doing something
+unexpected on the robot. Master of Professional Engineering (Mechanical) at UWA.
 
 ---
 
@@ -37,10 +36,10 @@ completely different flavour of pain to the simulation work.
 
 **Autonomous navigation and SLAM, sim to real**
 
-GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, plus 3D SLAM. Built in
-Gazebo first, then let loose on this thing outdoors. I also trained a few PyTorch models along the
-way: object detectors to find letters around the course, and a vision-based driving policy that took
-camera images straight to steering.
+GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, plus 3D SLAM. I built
+it in Gazebo first, then let it loose on this thing outdoors, which is where you find out which bits
+you got wrong. I also trained a few PyTorch models along the way: object detectors to find letters
+around the course, and a vision-based driving policy that took camera images straight to steering.
 
 Watching it drive itself around outside never got old.
 
@@ -52,10 +51,10 @@ Watching it drive itself around outside never got old.
 
 **FPV drones**
 
-I build and fly custom FPV quads, and put the footage up on
-**[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**.
+I build and fly custom FPV quads. This one is a 5 inch Armattan build, and it has taken a fair
+beating.
 
-There is no grand reason for this one. It is just good fun.
+The footage lives over at **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**.
 
 <br clear="all">
 
