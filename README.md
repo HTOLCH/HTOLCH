@@ -4,7 +4,8 @@ Robotics and autonomy software engineer in Perth, Western Australia. C++ and Pyt
 ROS 2. I work on the part of the stack where planning and perception have to survive contact with
 real hardware.
 
-Master of Professional Engineering (Mechanical), UWA.
+My degree is a Master of Professional Engineering (Mechanical) from UWA, so I can design the mount as
+well as write the node that reads the sensor bolted to it. On a small team that tends to be useful.
 
 ---
 
@@ -93,14 +94,17 @@ Flight footage: **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**
 **Robotics** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman), coordinate transforms
 **Perception** Lidar tracking and object detection, CUDA, PyTorch, OpenCV, YOLO
 **Simulation** AWSIM / Unity, Gazebo, sim-to-real testing
+**Mechanical** SolidWorks, Siemens NX, MATLAB/Simulink, vehicle dynamics, BOM ownership
+**Electronics** Soldering, flight controllers, Raspberry Pi, motor characterisation, sensor integration
 **Tooling** Linux, Git, Docker
 
 Previously: engineering internships in mining and energy, at First Mode on a hydrogen haul-truck
-retrofit and at GPA Engineering on pipelines. I tutor Mobile Robots, and Risk, Reliability & Safety,
-at UWA.
+retrofit, where I owned the bill of materials for a cooling-system build, and at GPA Engineering on
+pipelines and pressure equipment. I tutor Mobile Robots, and Risk, Reliability & Safety, at UWA.
 
 ---
 
-I completed my Master's in 2026 and am looking for graduate robotics and autonomy roles in Perth.
+I completed my Master's in 2026, I am available now, and I am looking for graduate robotics and
+autonomy roles in Perth.
 
 Perth, WA &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) &nbsp;·&nbsp; [YouTube](https://www.youtube.com/@hazfpv771) &nbsp;·&nbsp; harrytolcher1@gmail.com
