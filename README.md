@@ -43,12 +43,12 @@ vehicle.
 **The map it localises against**
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/51d4abf89e29fb7b4fd6adfc9c72dac9c8760f74/media/campus_pointcloud.png" width="820" alt="Lidar pointcloud map of the UWA campus, coloured by height">
+  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud.png" width="620" alt="Lidar pointcloud map of the UWA campus, top down, coloured by height">
 </p>
 
-The prior map of the UWA campus the shuttle localises into: 1.25 million points over roughly 840 m by
-560 m, coloured by height here. Buildings, footpaths and tree canopies all fall out of it. A lanelet2
-vector map sits on top for the drivable paths and lane geometry.
+The prior lidar map of the UWA campus that the shuttle localises into: 1.25 million points over
+roughly 840 m by 560 m, coloured by height. Buildings, footpaths and tree canopies all fall out of
+it. A lanelet2 vector map sits on top of this for the drivable paths and lane geometry.
 
 ---
 
