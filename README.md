@@ -5,15 +5,14 @@ stuck into tough problems, mostly in C++ and Python.
 
 Most of what I enjoy sits where the software meets the hardware: motion planning, perception, and
 working out why the thing that ran perfectly in the sim is now doing something unexpected on the
-robot.
-Master of Professional Engineering (Mechanical) at UWA, and a fair few personal projects that got
-out of hand.
+robot. Master of Professional Engineering (Mechanical) at UWA, and a fair few personal projects that
+got out of hand.
 
 ---
 
 ### Things I've built
 
-**🚌 Crowd-matching velocity planning for Autoware** *(Master's thesis)*
+**Crowd-matching velocity planning for Autoware** *(Master's thesis)*
 
 Out of the box, Autoware slams on the brakes 5 m in front of every pedestrian it sees. Put that on a
 busy campus footpath and the shuttle just stands there, forever. So I wrote a
@@ -24,39 +23,41 @@ The tricky part was doing that without ever letting it get too close to anyone. 
 8-way comparison of planners and controllers in AWSIM.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="820" alt="Crowd-matching velocity planning in AWSIM simulation">
+  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="700" alt="Crowd-matching velocity planning in AWSIM simulation">
 </p>
 
-**[→ Code, results and the full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
+**[Code, results and the full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
 
 I also got the full Autoware stack up and running on the actual nUWAy shuttle hardware, which was a
 completely different flavour of pain to the simulation work.
 
 ---
 
-**🤖 Autonomous navigation and SLAM, sim to real**
+<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/pioneer.jpg" width="620" alt="Pioneer robot with lidar and onboard compute, outdoors at UWA">
-</p>
+**Autonomous navigation and SLAM, sim to real**
 
-GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, plus 3D SLAM. I built
-it in Gazebo first, then let it loose on this thing outdoors and found out which bits I had got
-wrong. Also trained a few PyTorch models along the way: object detectors to find letters around the
-course, and a vision-based driving policy that took camera images straight to steering.
+GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, plus 3D SLAM. Built in
+Gazebo first, then let loose on this thing outdoors. I also trained a few PyTorch models along the
+way: object detectors to find letters around the course, and a vision-based driving policy that took
+camera images straight to steering.
+
+Watching it drive itself around outside never got old.
+
+<br clear="all">
 
 ---
 
-**🚁 FPV drones**
+<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/main/media/drone.jpg" width="620" alt="Custom-built 5 inch FPV quadcopter">
-</p>
+**FPV drones**
 
 I build and fly custom FPV quads, and put the footage up on
-**[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**. This is where most of my "why did
-that break" education has come from, and it is the reason I am as comfortable with a soldering iron
-and a flight controller as I am with a compiler.
+**[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**.
+
+There is no grand reason for this one. It is just good fun.
+
+<br clear="all">
 
 ---
 
@@ -74,4 +75,4 @@ Reliability & Safety at UWA.
 
 ---
 
-📍 Perth, WA · [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) · [YouTube](https://www.youtube.com/@hazfpv771) · harrytolcher1@gmail.com
+Perth, WA &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/harry-tolcher-b69a65267/) &nbsp;·&nbsp; [YouTube](https://www.youtube.com/@hazfpv771) &nbsp;·&nbsp; harrytolcher1@gmail.com
