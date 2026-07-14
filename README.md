@@ -15,21 +15,19 @@ well as write the node that reads the sensor bolted to it. On a small team that 
 
 <img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/c55ca539e05c5aed611e9554a42e448b9bbfe12b/media/nuway_shuttle.jpg" alt="The nUWAy autonomous shuttle, an EasyMile EZ10, on the UWA campus">
 
-The vehicle is nUWAy, an EasyMile EZ10 that runs on shared footpaths at UWA.
+nUWAy is an EasyMile EZ10 running on shared footpaths at UWA. Stock Autoware stops 5 m short of
+every pedestrian it sees, so on a busy path it never gets anywhere.
 
-Stock Autoware places a 5 m stop margin in front of every pedestrian it detects. On a shared campus
-footpath the shuttle stops continuously and never completes a route.
+I wrote a `behavior_velocity_planner` plugin that picks out the pedestrians walking with the bus,
+estimates the crowd's speed and matches it, with proximity attenuation underneath so closing on the
+crowd never costs clearance. To test it I built a pedestrian simulation environment in AWSIM, with
+the crowd driven by a Social Force Model, which doubled as the baseline I benchmarked against. I also
+brought the full Autoware stack up on the shuttle's own hardware, and built the lidar perception that
+tracks pedestrians around it.
 
-I wrote a `behavior_velocity_planner` plugin that identifies co-flow pedestrians, the ones moving in
-the same direction as the vehicle, estimates the mean speed of the crowd, and smoothly converges the
-shuttle onto it. Proximity-based velocity attenuation runs underneath, targeting zero speed at a
-configurable minimum clearance, so matching the crowd never comes at the cost of clearance. I
-implemented a classical Social Force Model (Helbing & Molnar, 1995) as the baseline to measure it
-against.
-
-Validated in AWSIM across a sweep of pedestrian densities, benchmarked against the baseline and a
-range of planner and controller configurations. The setup I settled on removed stop events entirely
-and held mean time-to-collision above 2.3 s. Marked 87.
+Across a sweep of pedestrian densities it removed stop events entirely and held mean
+time-to-collision above 2.3 s. Marked 87. The planner was validated in simulation; the stack
+deployment was on the vehicle.
 
 <br clear="all">
 
@@ -38,21 +36,8 @@ and held mean time-to-collision above 2.3 s. Marked 87.
   <br><sub>Left: RViz, with the live co-flow speed readout. Right: AWSIM.</sub>
 </p>
 
-Two other parts of the same project:
-
-- A custom lidar perception engine that detects and tracks pedestrians around the vehicle in real
-  time, GPU-accelerated with hand-written CUDA kernels to keep pace with the sensor rate.
-- Bringing the full Autoware stack up on the nUWAy shuttle's own hardware, integrated from a large
-  and sparsely documented codebase, with a safety fallback layer behind it.
-
-To be precise about scope: the planner was validated in simulation. The stack deployment was on the
-vehicle.
-
-**The map it localises against**
-
-The prior lidar map of the UWA campus: 1.25 million points over roughly 840 m by 560 m, coloured by
-height. Buildings, footpaths and tree canopies all fall out of it. A lanelet2 vector map sits on top
-of this for the drivable paths and lane geometry.
+The shuttle localises against a prior lidar map of campus: 1.25 million points over roughly 840 m by
+560 m, with a lanelet2 vector map on top for the drivable paths.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud_perspective.png" width="560" alt="Lidar pointcloud map of the UWA campus, perspective view, coloured by height">
@@ -64,13 +49,10 @@ of this for the drivable paths and lane geometry.
 
 ### Autonomous navigation and SLAM, simulation through to hardware
 
-GPS-waypoint navigation with a tuned Kalman filter fusing IMU, lidar and GPS, alongside 3D SLAM.
-Developed in Gazebo, then deployed and validated on a Pioneer robot outdoors, which is where the
-assumptions that only hold in simulation tend to surface.
-
-The perception side ran on PyTorch: object detectors to locate targets around the course, where I
-chose YOLO over a custom model for inference speed, and a vision-based driving policy mapping camera
-images directly to steering.
+GPS-waypoint navigation with a tuned Kalman filter over IMU, lidar and GPS, plus 3D SLAM. Built in
+Gazebo, then deployed on a Pioneer robot outdoors, which is where the assumptions that only hold in
+simulation tend to surface. Perception ran on PyTorch: object detectors to find targets around the
+course, and a vision-based policy mapping camera images straight to steering.
 
 <br clear="all">
 
@@ -91,16 +73,16 @@ Flight footage: **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**
 ### Technical
 
 **Languages** C++, Python
-**Robotics** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman), coordinate transforms
-**Perception** Lidar tracking and object detection, CUDA, PyTorch, OpenCV, YOLO
+**Robotics** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman)
+**Perception** Lidar tracking and object detection, PyTorch, OpenCV, YOLO
 **Simulation** AWSIM / Unity, Gazebo, sim-to-real testing
 **Mechanical** SolidWorks, Siemens NX, MATLAB/Simulink, vehicle dynamics, BOM ownership
 **Electronics** Soldering, flight controllers, Raspberry Pi, motor characterisation, sensor integration
 **Tooling** Linux, Git, Docker
 
 Previously: engineering internships in mining and energy, at First Mode on a hydrogen haul-truck
-retrofit, where I owned the bill of materials for a cooling-system build, and at GPA Engineering on
-pipelines and pressure equipment. I tutor Mobile Robots, and Risk, Reliability & Safety, at UWA.
+retrofit and at GPA Engineering on pipelines. I tutor Mobile Robots, and Risk, Reliability & Safety,
+at UWA.
 
 ---
 
