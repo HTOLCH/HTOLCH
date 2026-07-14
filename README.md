@@ -12,6 +12,10 @@ Master of Professional Engineering (Mechanical), UWA.
 
 *Master's thesis.* **[Code, results and full write-up](https://github.com/HTOLCH/autoware_crowd_matching_module)**
 
+<img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/c55ca539e05c5aed611e9554a42e448b9bbfe12b/media/nuway_shuttle.jpg" alt="The nUWAy autonomous shuttle, an EasyMile EZ10, on the UWA campus">
+
+The vehicle is nUWAy, an EasyMile EZ10 that runs on shared footpaths at UWA.
+
 Stock Autoware places a 5 m stop margin in front of every pedestrian it detects. On a shared campus
 footpath the shuttle stops continuously and never completes a route.
 
@@ -26,8 +30,11 @@ Validated in AWSIM across a sweep of pedestrian densities, benchmarked against t
 range of planner and controller configurations. The setup I settled on removed stop events entirely
 and held mean time-to-collision above 2.3 s. Marked 87.
 
+<br clear="all">
+
 <p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="700" alt="Crowd-matching velocity planning in AWSIM simulation">
+  <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="560" alt="Crowd-matching velocity planning in AWSIM simulation">
+  <br><sub>Left: RViz, with the live co-flow speed readout. Right: AWSIM.</sub>
 </p>
 
 Two other parts of the same project:
@@ -40,19 +47,19 @@ Two other parts of the same project:
 To be precise about scope: the planner was validated in simulation. The stack deployment was on the
 vehicle.
 
+<img align="right" width="230" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud.png" alt="Lidar pointcloud map of the UWA campus, top down, coloured by height">
+
 **The map it localises against**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud.png" width="620" alt="Lidar pointcloud map of the UWA campus, top down, coloured by height">
-</p>
+The prior lidar map of the UWA campus: 1.25 million points over roughly 840 m by 560 m, coloured by
+height. Buildings, footpaths and tree canopies all fall out of it. A lanelet2 vector map sits on top
+of this for the drivable paths and lane geometry.
 
-The prior lidar map of the UWA campus that the shuttle localises into: 1.25 million points over
-roughly 840 m by 560 m, coloured by height. Buildings, footpaths and tree canopies all fall out of
-it. A lanelet2 vector map sits on top of this for the drivable paths and lane geometry.
+<br clear="all">
 
 ---
 
-<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
+<img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/pioneer.jpg" alt="Pioneer robot with lidar and onboard compute">
 
 ### Autonomous navigation and SLAM, simulation through to hardware
 
@@ -68,7 +75,7 @@ images directly to steering.
 
 ---
 
-<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
+<img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
 
 ### FPV drones
 
