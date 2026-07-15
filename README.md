@@ -51,6 +51,22 @@ vision-based policy that mapped camera images directly to steering.
 
 ---
 
+### Active-aero lap-time simulation
+
+*UWA Motorsport, Formula SAE*
+
+A lap-time study for the UWA Motorsport team's Formula SAE car, built in MATLAB on the OpenLAP
+simulator. I modelled a new active-aero package against the existing static kit, where the active
+system sheds downforce and drag down the straights and brings it back for the corners, then compared
+the two over a full lap to see where the trade actually paid off.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/9c34f72612cf4f07851d8022b3a2af21be86d08f/media/aero_drs_laptime.jpg" width="540" alt="OpenLAP lap-time simulation: vehicle speed over the lap with the DRS drag-reduction zones shaded">
+  <br><sub>Speed over the lap from OpenLAP, with the DRS (drag-reduction) zones shaded.</sub>
+</p>
+
+---
+
 ### FPV drones
 
 <img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
