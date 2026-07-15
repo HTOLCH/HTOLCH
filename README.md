@@ -72,7 +72,7 @@ the two over a full lap to see where the trade actually paid off.
 <img align="right" width="260" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/bf5e42aedf46f11bd433d1e001cfa649a16013cb/media/drone.jpg" alt="Custom-built 5 inch FPV quadcopter">
 
 I design, build, repair and fly custom FPV quadcopters. The one pictured is a 5 inch Armattan build.
-It keeps me close to the hardware, and there's flight footage on
+There's flight footage on
 [YouTube](https://www.youtube.com/@hazfpv771).
 
 <br clear="all">
