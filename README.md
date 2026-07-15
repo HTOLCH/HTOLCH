@@ -33,12 +33,12 @@ deployment ran on the vehicle.
   <img src="https://raw.githubusercontent.com/HTOLCH/autoware_crowd_matching_module/3a5c5a85b04ad23f0823731d918c1b4ec0605e81/docs/media/demo.gif" width="540" alt="Crowd-matching velocity planning in AWSIM simulation">
 </p>
 
-<img align="right" width="300" src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud_perspective.png" alt="Lidar pointcloud map of the UWA campus, coloured by height">
+The planner localises against a prior lidar map of campus, 1.25 million points over roughly 840 by
+560 m, with a lanelet2 vector map on top for the drivable paths.
 
-It localises against a prior lidar map of campus: 1.25 million points over roughly 840 by 560 m, with
-a lanelet2 vector map on top for the drivable paths.
-
-<br clear="all">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/HTOLCH/HTOLCH/5e4e5747df043f97b250a7852fb23a3c4f10b065/media/campus_pointcloud_perspective.png" width="540" alt="Lidar pointcloud map of the UWA campus, coloured by height">
+</p>
 
 ---
 
@@ -68,13 +68,13 @@ Footage: **[youtube.com/@hazfpv771](https://www.youtube.com/@hazfpv771)**
 
 ### Technical
 
-**Languages** C++, Python
-**Robotics** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman)
-**Perception** Lidar tracking and object detection, PyTorch, OpenCV, YOLO
-**Simulation** AWSIM / Unity, Gazebo, sim-to-real testing
-**Mechanical** SolidWorks, Siemens NX, MATLAB/Simulink, vehicle dynamics, BOM ownership
-**Electronics** Soldering, flight controllers, Raspberry Pi, motor characterisation, sensor integration
-**Tooling** Linux, Git, Docker
+- **Languages:** C++, Python
+- **Robotics:** ROS 2, Autoware, motion and velocity planning, SLAM, state estimation and sensor fusion (Kalman)
+- **Perception:** Lidar tracking and object detection, PyTorch, OpenCV, YOLO
+- **Simulation:** AWSIM / Unity, Gazebo, sim-to-real testing
+- **Mechanical:** SolidWorks, Siemens NX, MATLAB/Simulink, vehicle dynamics, BOM ownership
+- **Electronics:** Soldering, flight-controller tuning, Raspberry Pi, motor characterisation, sensor integration
+- **Tooling:** Linux, Git, Docker
 
 Previously: internships in mining and energy, at First Mode on a hydrogen haul-truck retrofit and at
 GPA Engineering on pipelines. I tutor Mobile Robots, and Risk, Reliability & Safety, at UWA.
