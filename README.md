@@ -1,8 +1,6 @@
 ## Harry Tolcher
 
-Robotics and autonomy software engineer based in Perth, working in C++ and Python on ROS 2, on the
-part of the stack where planning and perception meet real hardware. Mechanical engineer by training
-(MPE, UWA), so I'm as comfortable designing the sensor mount as writing the node that reads it.
+Robotics and autonomy engineer based in Perth, working in C++ and Python on ROS 2. 
 
 **Available now, and looking for graduate robotics and autonomy roles in Perth.**
 
