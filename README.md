@@ -1,9 +1,4 @@
-## Harry Tolcher
-
-Robotics and autonomy engineer based in Perth, working in C++ and Python on ROS 2. 
-
-**Available now, and looking for graduate robotics and autonomy roles in Perth.**
-
+## Stuff I've Done
 ---
 
 ### Crowd-matching velocity planning for Autoware
