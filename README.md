@@ -1,5 +1,4 @@
 ## Stuff I've Done
----
 
 ### Crowd-matching velocity planning for Autoware
 
